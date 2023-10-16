@@ -1,0 +1,342 @@
+:root{
+    display: flex;
+    justify-content: center;
+}
+
+.page{
+    width: 1440px;
+    min-height: 550px;
+    display: flex;
+    justify-content: center;
+    margin-top: -.5rem;
+}
+
+.app{
+    width: 1440px;
+    min-height: 550px;
+    background-color: hsl(0, 0%, 98%);
+    position: relative;
+}
+
+.darkApp{
+    width: 1440px;
+    min-height: 550px;
+    background-color: rgb(15, 15, 57);
+    position: relative;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    width: 1440px;
+    height: 300px;
+    background-repeat: no-repeat;
+}
+
+.header_theme{
+    position: absolute;
+    width: 540px;
+    display: flex;
+    z-index: 6;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h1{
+    position: relative;
+    top: 2rem;
+    z-index: 4;
+    color: white;
+    font-size: 2.6rem;
+    letter-spacing: 15px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.themeBtn{
+    position: relative;
+    top: 2.3rem;
+    background: none;
+    border: none;
+}
+
+.theme_img{
+    width: 2rem;
+}
+
+@media only screen and (max-width:760px){
+    .page{
+        width: 100vw;
+        min-height: 90vh;
+    }
+
+    .app, .darkApp{
+        width: 100vw;
+        min-height: 90vh;
+    }
+
+    nav{
+        width: 100vw;
+        height: 300px;
+    }
+
+    .nav_image{
+        width: 100vw;
+        height: 200px;
+    }
+
+    .header_theme{
+        width: 328px;
+        top: -.5rem;
+    }
+
+    h1{
+        font-size: 1.6rem;
+    }
+
+    .theme_img{
+        width: 1.5rem;
+    }
+}
+
+.todoForm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 450px;
+    top: 10rem;
+    z-index: 2;
+    width: 540px;
+    height: 65px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.darkForm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 450px;
+    top: 10rem;
+    z-index: 2;
+    width: 540px;
+    height: 65px;
+    background-color: hsl(236, 31%, 18%);
+    border-radius: 5px
+}
+
+.todoText{
+    width: 400px;
+    height: 3rem;
+    border: none;
+    font-size: 1.2rem;
+    background: none;
+    color: grey;
+}
+
+.addTodo{
+    position: relative;
+    left: -1.67rem;
+    height: 1.7rem;
+    width: 1.7rem;
+    border-radius: 100%;
+    background: none;
+    border: 1px solid rgb(218, 216, 216);
+}
+
+.todoText:focus{
+    outline: none;
+}
+
+@media only screen and (max-width:760px){
+    .todoForm, .darkForm {
+        width: 90vw;
+        height: 50px;
+        left: 1.2rem;
+        top: 6rem;
+    }
+
+    .todoText{
+        width: 60vw;
+    }
+
+    .addTodo{
+        left: -1rem;
+    }
+}
+
+.toDolist{
+    padding-top: .5rem;
+    width: 540px;
+    position: relative;
+    left: 450px;
+    top: -3rem;
+    min-height: 8rem;
+    background-color: white;
+    border-radius: 5px;
+    color: grey;
+}
+
+.darkTodoList{
+    padding-top: .5rem;
+    width: 540px;
+    position: relative;
+    left: 450px;
+    top: -3rem;
+    min-height: 8rem;
+    border-radius: 5px;
+    color: grey;
+    background-color: hsl(236, 31%, 18%);
+}
+
+.todo{
+    margin-top: 1rem;
+}
+
+fieldset{
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 2.5rem;
+    margin: auto;
+    border: none;
+    border-bottom: 1px solid #c8c6c6;
+}
+
+fieldset.checked{
+    text-decoration: line-through;
+    color: #c8c6c6;
+}
+
+.todoP{
+    margin-right: 4rem;
+    margin-left: 4rem;
+}
+
+.undone{
+    position: absolute;
+    left: 1.7rem;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 100%;
+    border: 1px solid rgb(200, 199, 199);
+    background: none;
+    margin-right: 2rem;
+}
+
+.done{
+    position: absolute;
+    left: 1.7rem;
+    margin-right: 2rem;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 100%;
+    border: none;
+    background: -webkit-linear-gradient(right, #57ddff, #c058f3);
+}
+
+.deleteBtn{
+    position: absolute;
+    right: 2rem;
+    display: flex;
+    background: none;
+    border: none;
+    display: none;
+}
+
+fieldset:hover > .deleteBtn{
+    display: block;
+    cursor: pointer;
+}
+
+@media only screen and (max-width:760px){
+    .toDolist, .darkTodoList{
+        width: 90vw;
+        left: 1.2rem;
+        top: -8rem;
+    }
+
+    .todoP{
+        margin-left: 3rem;
+    }
+
+    .deleteBtn{
+        display: block;
+        right: 1rem;
+    }
+
+    .undone, .done{
+        left: 1.3rem;
+    }
+}
+
+.views{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.allActiveComplete{
+    position: relative;
+    display: flex;
+}
+
+.darkAllActiveComplete{
+    position: relative;
+    display: flex;
+}
+
+.viewsBtn{
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    color: rgb(171, 164, 164);
+    letter-spacing: 1px;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.all{
+   color: rgb(86, 86, 253);
+}
+
+.items_left{
+    position: relative;
+    left: -3.4rem;
+}
+
+.clear_completed{
+    position: relative;
+    right: -3.5rem;
+}
+
+@media only screen and (max-width:760px){
+    .items_left{
+        left: -2.8rem;
+    }
+
+    .allActiveComplete{
+        width: 90vw;
+        height: 50px;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        top: 4.5rem;
+        border-radius: 5px;
+    }
+
+    .darkAllActiveComplete{
+        width: 90vw;
+        height: 50px;
+        background-color: hsl(236, 31%, 18%);
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        top: 4.5rem;
+        border-radius: 5px;
+    }
+}
