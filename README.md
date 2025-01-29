@@ -10,8 +10,6 @@
     - Toggle light and dark mode
     - View the optimal layout for the app depending on their device's screen size
     - See hover states for all interactive elements on the page
-    - Bonus: Drag and drop to reorder items on the list
-    - Bonus: Build this project as a full-stack application
 
 
 # Link
